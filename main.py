@@ -71,14 +71,6 @@ def parseJobs(postings, url):
 
     if int(postings) == 0:
         return f"Since {currentDate}, and as of {time}:\nThere are no new postings."
-    # elif 0 < len(postings) < 10:
-    #     finalText = ""
-    #     for i in range(len(postings)):
-    #         jobTitle = postings[i].find_elements("xpath", "//td[contains(@class, 'align--middle')]")[i].get_attribute("data-totitle")
-    #         company = postings[i].find_elements("xpath", "//td[@class='orgDivTitleMaxWidth']")[i].get_attribute("data-totitle")
-    #         finalText += f"{jobTitle.strip()} - {company.strip()}\n"
-
-    #     return f"Since {currentDate}, here are the new job postings:\n{finalText}"
     else:
         return f"Since {currentDate}, there are {postings} postings available, visit:\n{url}"
 
